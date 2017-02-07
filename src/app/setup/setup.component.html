@@ -1,0 +1,39 @@
+<div class="container">
+  <div>
+  <form #prefForm="ngForm" (ngSubmit)="setPrefrences(prefForm.value)">
+    <p>
+      <label>
+        Enter bus stop number or name
+        <input type="text" name="stop" [(ngModel)]="user.stop">
+      </label>
+    </p>
+    <p>
+      <label>
+        Name
+        <input type="text" name="name" [(ngModel)]="user.name">
+      </label>
+    </p>
+    <p>
+      <label>
+        Address
+        <input type="text" name="address" [(ngModel)]="user.address">
+      </label>
+    </p>
+    <p>
+      <label>
+        Phone
+        <input type="text" name="phone" [(ngModel)]="user.phone">
+      </label>
+    </p>
+    <button type="submit">Set favourites</button>
+  </form>
+
+  <button (click)="removePrefrences()">Remove favourites</button>
+  </div>
+
+  <div>
+
+  <iframe width="600" height="450" frameborder="0" style="border:0" [src]="url | safe"></iframe>
+
+  </div>
+</div>
